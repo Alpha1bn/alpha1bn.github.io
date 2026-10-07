@@ -1,0 +1,41 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recovery Neo for Android — Aide / FAQ</title>
+<style>body{font-family:-apple-system,system-ui,Segoe UI,Roboto,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.55;color:#1e293b}table{border-collapse:collapse;width:100%;font-size:.95em}th,td{border:1px solid #cbd5e1;padding:8px;text-align:left;vertical-align:top}th{background:#f1f5f9}code{background:#f1f5f9;padding:1px 4px;border-radius:3px}h1{font-size:1.6em}h2{font-size:1.2em;margin-top:1.6em}h3{font-size:1.05em;margin-top:1.3em}blockquote{margin:0 0 1em;padding:.4em .9em;border-left:3px solid #cbd5e1;color:#475569}nav.langs{font-size:.85em;color:#475569;margin-bottom:1.2em}nav.langs a{margin-right:.6em;color:#0f172a;text-decoration:underline}nav.langs a.active{font-weight:600;color:#111}</style></head><body>
+<nav class="langs"><a href="../faq.html">English</a>
+<a href="../ko/faq.html">한국어</a>
+<a href="../ja/faq.html">日本語</a>
+<a href="../zh-CN/faq.html">简体中文</a>
+<a href="../de/faq.html">Deutsch</a>
+<a href="../es/faq.html">Español</a>
+<a href="../fr/faq.html" class="active">Français</a>
+<a href="../ru/faq.html">Русский</a>
+<a href="../hi/faq.html">हिन्दी</a>
+<a href="../sw/faq.html">Kiswahili</a></nav>
+<blockquote><p>Cette traduction est fournie pour votre commodité. La version anglaise fait foi, sauf si la loi de votre pays de résidence en dispose autrement.</p></blockquote>
+<h1>Recovery Neo for Android — Aide / FAQ</h1>
+<p>Dernière mise à jour : 7 octobre 2026 · Version 1.5.0</p>
+<h2>1. Quels lecteurs et systèmes de fichiers peut-il récupérer ?</h2>
+<p>Clés USB, cartes SD et microSD (via un adaptateur OTG ou un lecteur de cartes) et SSD ou HDD externes USB-C. Les lecteurs FAT32 et exFAT sont récupérés avec leurs noms de fichiers et dossiers d'origine. Les lecteurs NTFS, ext4, HFS+ et APFS sont récupérés uniquement par carving du contenu : les fichiers reviennent par type et contenu, mais sans nom ni dossier. L'application indique le mode dès que le lecteur apparaît sur l'écran d'accueil. Les lecteurs ne parlant qu'UAS ne sont pas encore pris en charge.</p>
+<h2>2. Pourquoi ne peut-il pas récupérer la mémoire interne du téléphone ?</h2>
+<p>Android ne donne pas aux applications un accès brut à la mémoire du téléphone ; aucune application ne peut donc l'analyser bloc par bloc. Une carte microSD dans l'emplacement du téléphone subit la même limite : retirez-la et placez-la dans un lecteur de cartes OTG.</p>
+<h2>3. Qu'est-ce qui est gratuit et qu'est-ce qui est payant ?</h2>
+<p>Gratuit : l'analyse complète avec ATOLL™ moteur 1, la récupération des noms de fichiers et l'enregistrement des résultats après une courte publicité avec récompense. Payant (pass 48 h ou Lifetime) : sans publicité, plus ATOLL™ moteur 2, qui tente de réassembler les photos fragmentées et déverrouille les éléments supplémentaires trouvés. L'analyse n'est jamais conditionnée à un achat.</p>
+<h2>4. Pass 48 h, Lifetime, remboursements et restauration des achats</h2>
+<p>Le pass 48 h commence au moment de l'achat et couvre toutes les récupérations de cette période ; acheter un autre pass pendant qu'un est actif ajoute 48 heures. Lifetime est un achat unique. Les remboursements suivent la politique de Google Play (généralement sous 48 heures). Après une réinstallation, touchez « Restaurer les achats » dans la feuille d'achat : Lifetime revient, mais un pass 48 h déjà utilisé ne peut pas être restauré. Les éléments supplémentaires trouvés par ATOLL 2 peuvent être endommagés ou incomplets, et l'achat ne garantit pas leur récupération.</p>
+<h2>5. La publicité ne se charge pas : puis-je quand même enregistrer ?</h2>
+<p>Oui. Si la publicité échoue deux fois ou si vous avez attendu environ 20 secondes, l'application passe à un court compte à rebours puis enregistre gratuitement. Hors ligne, c'est pareil. « Plus tard » garde toujours les fichiers récupérés dans l'application pour les enregistrer une autre fois.</p>
+<h2>6. Les fichiers récupérés semblent endommagés ou incomplets</h2>
+<p>Les données supprimées peuvent être partiellement écrasées par tout ce qui a été écrit ensuite sur le lecteur, et ces fichiers ne peuvent pas être complétés. Les nombres affichés sont vérifiés : les fragments de 0 octet, les doublons et les fichiers indécodables sont exclus et listés sous « Exclus car endommagés ou en double ». La récupération n'est jamais garantie : cessez d'utiliser le lecteur dès que vous constatez une perte de données.</p>
+<h2>7. L'analyse est lente, le téléphone chauffe, la batterie se vide</h2>
+<p>L'analyse lit tout le lecteur une fois, en lecture seule. La vitesse dépend du lecteur et de la liaison USB : environ 7 Mo/s en USB 2.0, soit près de 70 minutes pour 32 Go. C'est un travail lourd : l'application vérifie la batterie avant de démarrer, ralentit quand le téléphone chauffe et maintient l'analyse via une notification écran éteint. La charge sans fil pendant l'analyse ne pose pas de problème ; le port USB-C est occupé par le lecteur.</p>
+<h2>8. Puis-je utiliser le mode avion pendant la récupération ?</h2>
+<p>Oui. L'analyse, la récupération du système de fichiers, l'extraction et la copie dans l'application s'exécutent sur le téléphone sans réseau. Internet n'est utilisé que sur l'écran des résultats (une publicité avec récompense ou un achat) et au démarrage (vérification des mises à jour Google Play et préparation des publicités/paiements).</p>
+<h2>9. Où sont les fichiers récupérés ?</h2>
+<p>Tant que vous ne les enregistrez pas, les fichiers récupérés restent dans le stockage privé de l'application ; les trois dernières récupérations sont conservées. « Ouvrir le dossier des résultats » les copie dans Downloads/RecoveryNeo/&lt;tâche&gt;/, un dossier public lisible par d'autres applications (l'application vous avertit une fois avant la première copie). « Partager » envoie les fichiers sélectionnés à une autre application sans copier tout le dossier.</p>
+<h2>10. Confidentialité : quelque chose quitte-t-il mon téléphone ?</h2>
+<p>Non. Le contenu du lecteur et les fichiers récupérés ne quittent jamais le téléphone, et l'application n'a pas de serveur. Le seul trafic réseau concerne Google AdMob (publicités avec récompense et consentement), Google Play Billing et les mises à jour Google Play. Les détails figurent dans la politique de confidentialité.</p>
+<h2>11. Mon lecteur n'est pas détecté</h2>
+<p>Utilisez un adaptateur ou un câble marqué OTG / compatible données : un câble de charge seule ne fonctionne pas. Les SSD externes se branchent directement en USB-C avec un câble de données. Ouvrez l'application et touchez Actualiser ; la boîte de dialogue d'autorisation USB apparaît dans l'application à la première lecture du lecteur (depuis la 1.5.0, Android ne l'affiche plus quand l'application est fermée). Les lecteurs gourmands peuvent nécessiter un hub auto-alimenté. Les lecteurs UAS uniquement ne sont pas encore pris en charge.</p>
+<h2>12. Comment contacter le développeur ?</h2>
+<p>Paramètres → « Contacter le développeur (e-mail) » ouvre un message vers sungjyny@gmail.com. Indiquez le modèle du téléphone, la version d'Android, le type de lecteur et ce que vous avez vu à l'écran.</p>
+<p>© 2026 JIN ATOLL</p>
+</body></html>

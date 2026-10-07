@@ -1,0 +1,41 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Recovery Neo for Android — 帮助 / 常见问题</title>
+<style>body{font-family:-apple-system,system-ui,Segoe UI,Roboto,sans-serif;max-width:760px;margin:40px auto;padding:0 20px;line-height:1.55;color:#1e293b}table{border-collapse:collapse;width:100%;font-size:.95em}th,td{border:1px solid #cbd5e1;padding:8px;text-align:left;vertical-align:top}th{background:#f1f5f9}code{background:#f1f5f9;padding:1px 4px;border-radius:3px}h1{font-size:1.6em}h2{font-size:1.2em;margin-top:1.6em}h3{font-size:1.05em;margin-top:1.3em}blockquote{margin:0 0 1em;padding:.4em .9em;border-left:3px solid #cbd5e1;color:#475569}nav.langs{font-size:.85em;color:#475569;margin-bottom:1.2em}nav.langs a{margin-right:.6em;color:#0f172a;text-decoration:underline}nav.langs a.active{font-weight:600;color:#111}</style></head><body>
+<nav class="langs"><a href="../faq.html">English</a>
+<a href="../ko/faq.html">한국어</a>
+<a href="../ja/faq.html">日本語</a>
+<a href="../zh-CN/faq.html" class="active">简体中文</a>
+<a href="../de/faq.html">Deutsch</a>
+<a href="../es/faq.html">Español</a>
+<a href="../fr/faq.html">Français</a>
+<a href="../ru/faq.html">Русский</a>
+<a href="../hi/faq.html">हिन्दी</a>
+<a href="../sw/faq.html">Kiswahili</a></nav>
+<blockquote><p>本翻译仅为方便而提供。具有法律约束力的文本为英文版，除非您居住国的法律另有要求。</p></blockquote>
+<h1>Recovery Neo for Android — 帮助 / 常见问题</h1>
+<p>最后更新：2026 年 10 月 7 日 · 版本 1.5.0</p>
+<h2>1. 可以恢复哪些驱动器和文件系统？</h2>
+<p>支持 U 盘、SD 和 microSD 卡（通过 OTG 适配器或读卡器）以及 USB-C 外置 SSD/HDD。FAT32 和 exFAT 驱动器可恢复原始文件名和文件夹。NTFS、ext4、HFS+ 和 APFS 驱动器仅按内容雕刻恢复：文件按类型和内容找回，但没有文件名和文件夹。驱动器出现在主页时，应用会立即显示适用的模式。仅支持 UAS 的驱动器暂不支持。</p>
+<h2>2. 为什么不能恢复手机内部存储？</h2>
+<p>Android 不允许应用对手机自身存储进行原始访问，因此任何应用都无法逐块扫描。插在手机卡槽中的 microSD 卡也受同样限制：请取出并放入 OTG 读卡器。</p>
+<h2>3. 免费和付费有什么区别？</h2>
+<p>免费：完整的 ATOLL™ 引擎 1 扫描、文件名恢复，以及观看一次短激励广告后保存结果。付费（48 小时通行证或永久版）：无广告，并提供 ATOLL™ 引擎 2，它会尝试重组碎片化照片并解锁找到的额外项目。扫描从不以购买为前提。</p>
+<h2>4. 48 小时通行证、永久版、退款与恢复购买</h2>
+<p>48 小时通行证自购买时起生效，覆盖该时段内的所有恢复；在有效期内再次购买会追加 48 小时。永久版为一次性购买。退款遵循 Google Play 政策（通常在 48 小时内）。重新安装后请在购买页点击“恢复购买”——永久版会恢复，但已使用的 48 小时通行证无法恢复。ATOLL 2 找到的额外项目可能已损坏或不完整，购买不保证恢复成功。</p>
+<h2>5. 广告无法加载，还能保存文件吗？</h2>
+<p>可以。如果广告失败两次或您已等待约 20 秒，应用会切换到短倒计时并免费保存。离线时也是如此。“稍后”始终将恢复的文件保留在应用内，以便您另行保存。</p>
+<h2>6. 恢复的文件看起来损坏或不完整</h2>
+<p>删除的数据可能被之后写入驱动器的内容部分覆盖，此类文件无法完整复原。应用显示的数量已经过验证：0 字节碎片、重复项和无法解码的文件会被排除，并列在“因损坏或重复而排除”下。恢复从不保证——一旦发现数据丢失，请立即停止使用该驱动器。</p>
+<h2>7. 扫描很慢、手机发热、电量消耗快</h2>
+<p>扫描会以只读方式把整个驱动器读取一遍。速度由驱动器和 USB 连接决定——USB 2.0 下约 7 MB/s，32 GB 大约需要 70 分钟。扫描是重负载：应用会在开始前检查电量，手机发热时减速，并在熄屏时通过通知保持扫描。扫描期间可以无线充电；USB-C 接口已被驱动器占用。</p>
+<h2>8. 恢复期间可以开飞行模式吗？</h2>
+<p>可以。扫描、文件系统恢复、提取和应用内复制都在手机上离线完成。互联网仅在结果页（一次激励广告或购买）和启动时（Google Play 更新检查、广告/结算准备）使用。</p>
+<h2>9. 恢复的文件在哪里？</h2>
+<p>在保存之前，恢复的文件保存在应用的私有存储中，保留最近三次恢复。“打开结果文件夹”会把它们复制到 Downloads/RecoveryNeo/&lt;任务&gt;/，这是其他应用可读取的公共文件夹（首次复制前应用会提示一次）。“分享”只把选中的文件发送到其他应用，而不复制整个文件夹。</p>
+<h2>10. 隐私——有数据离开我的手机吗？</h2>
+<p>没有。驱动器内容和恢复的文件从不离开手机，应用也没有服务器。唯一的网络流量是 Google AdMob（激励广告和同意）、Google Play 结算和 Google Play 更新。详情见隐私政策。</p>
+<h2>11. 我的驱动器未被识别</h2>
+<p>请使用标有 OTG / 支持数据传输的适配器或线缆——仅充电线无法使用。外置 SSD 用数据线直接插入 USB-C。打开应用并点击刷新；USB 权限对话框会在应用首次读取驱动器时在应用内显示（自 1.5.0 起，应用关闭时 Android 不再弹出该对话框）。耗电大的驱动器可能需要自供电集线器。仅支持 UAS 的驱动器暂不支持。</p>
+<h2>12. 如何联系开发者？</h2>
+<p>设置 → “联系开发者（邮件）”会打开发往 sungjyny@gmail.com 的邮件。请注明手机型号、Android 版本、驱动器类型以及屏幕上看到的内容。</p>
+<p>© 2026 JIN ATOLL</p>
+</body></html>
