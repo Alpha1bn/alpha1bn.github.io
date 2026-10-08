@@ -1,0 +1,96 @@
+/* Apps by ATOLL — https://alpha1bn.github.io/recovery-neo/apps/
+   Mobile-first (business-card QR landing). System font stack, no external
+   resources. Light/dark via prefers-color-scheme. */
+:root {
+  --bg: #f6f7f9;
+  --card: #ffffff;
+  --text: #1e293b;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --accent: #0f766e;
+  --accent-text: #ffffff;
+  --soon-bg: #fef3c7;
+  --soon-text: #92400e;
+  --disabled-bg: #e2e8f0;
+  --disabled-text: #64748b;
+  --focus: #2563eb;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e2e8f0;
+    --muted: #94a3b8;
+    --line: #334155;
+    --accent: #2dd4bf;
+    --accent-text: #0f172a;
+    --soon-bg: #422006;
+    --soon-text: #fcd34d;
+    --disabled-bg: #334155;
+    --disabled-text: #94a3b8;
+    --focus: #60a5fa;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  line-height: 1.55;
+  font-size: 16px;
+}
+a { color: var(--accent); }
+a:focus-visible, button:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+.wrap { max-width: 640px; margin: 0 auto; padding: 20px 16px 40px; }
+
+nav.langs { font-size: .85em; color: var(--muted); margin-bottom: 1.2em; line-height: 2; }
+nav.langs a { margin-right: .6em; color: var(--text); text-decoration: underline; white-space: nowrap; }
+nav.langs a.active { font-weight: 600; text-decoration: none; }
+
+header.brand { text-align: center; margin: 8px 0 24px; }
+header.brand h1 { font-size: 2em; letter-spacing: .12em; margin: 0; }
+header.brand p { margin: 4px 0 0; color: var(--muted); }
+
+.apps { display: flex; flex-direction: column; gap: 16px; }
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+.card img { width: 72px; height: 72px; border-radius: 16px; display: block; }
+.card h2 { margin: 0 0 4px; font-size: 1.15em; line-height: 1.3; }
+.card p { margin: 0 0 12px; color: var(--muted); font-size: .95em; }
+.stores { display: flex; flex-wrap: wrap; gap: 8px; grid-column: 1 / -1; }
+@media (min-width: 420px) { .stores { grid-column: 2; } }
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  min-height: 44px; padding: 0 16px;
+  border-radius: 10px; border: 1px solid transparent;
+  background: var(--accent); color: var(--accent-text);
+  font-weight: 600; text-decoration: none; font-size: .95em;
+}
+.btn[aria-disabled="true"] {
+  background: var(--disabled-bg); color: var(--disabled-text);
+  border-color: var(--line); cursor: default;
+}
+.badge-soon {
+  display: inline-block; font-size: .75em; font-weight: 600;
+  padding: 2px 8px; border-radius: 999px;
+  background: var(--soon-bg); color: var(--soon-text);
+  vertical-align: middle; margin-left: 6px;
+}
+
+footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid var(--line); font-size: .9em; color: var(--muted); }
+footer p { margin: 0 0 8px; }
+footer .links a { margin-right: 12px; }
+footer dl { margin: 12px 0 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; }
+footer dt { font-weight: 600; color: var(--text); }
+footer dd { margin: 0; }
