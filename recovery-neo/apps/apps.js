@@ -4,11 +4,12 @@
  * ----------------------------------------------------------------------------
  * Flip `recoveryNeoAndroidLive` to true once the listing is live. On every
  * page load this script then (a) removes the `.badge-soon` element inside
- * `[data-app="recovery-neo"]` and (b) enables the Android button (removes
- * `aria-disabled`, keeps/sets `href` to the Play URL). While `false`, the
- * button is rendered with `aria-disabled="true"` and the badge, but `href`
- * stays set so a QR-code visitor can still tap through once the store page
- * exists. No HTML needs to change in any of the 10 pages.
+ * `[data-app="recovery-neo"]` and (b) shows the Android button as a normal
+ * button (drops the muted `btn-soon` class and `aria-describedby`). While
+ * `false`, the button is muted with the badge announced through
+ * `aria-describedby`, and `href` stays set so a QR-code visitor can still tap
+ * through once the store page exists (QA_v1.5.1 Q-21: no `aria-disabled` on a
+ * working link). No HTML needs to change in any of the 10 pages.
  */
 const RN_APPS_STATUS = { recoveryNeoAndroidLive: false };
 const RN_PLAY_URL = "https://play.google.com/store/apps/details?id=com.atoll.recovery_neo";
@@ -22,14 +23,17 @@ const RN_PLAY_URL = "https://play.google.com/store/apps/details?id=com.atoll.rec
     var link = card.querySelector('a[data-store="android"]');
     var badge = card.querySelector(".badge-soon");
     if (link && !link.getAttribute("href")) link.setAttribute("href", RN_PLAY_URL);
+    if (link) link.removeAttribute("aria-disabled");
     if (RN_APPS_STATUS.recoveryNeoAndroidLive) {
       if (badge) badge.parentNode.removeChild(badge);
       if (link) {
-        link.removeAttribute("aria-disabled");
+        link.classList.remove("btn-soon");
+        link.removeAttribute("aria-describedby");
         link.setAttribute("href", RN_PLAY_URL);
       }
     } else if (link) {
-      link.setAttribute("aria-disabled", "true");
+      link.classList.add("btn-soon");
+      if (badge && badge.id) link.setAttribute("aria-describedby", badge.id);
     }
   }
 

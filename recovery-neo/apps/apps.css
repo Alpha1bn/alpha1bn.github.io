@@ -77,9 +77,12 @@ header.brand p { margin: 4px 0 0; color: var(--muted); }
   background: var(--accent); color: var(--accent-text);
   font-weight: 600; text-decoration: none; font-size: .95em;
 }
-.btn[aria-disabled="true"] {
+/* QA_v1.5.1 Q-21: "coming soon" looks muted but stays a real link (QR
+   visitors tap through once the listing exists); the badge is announced via
+   aria-describedby instead of a contradictory aria-disabled. */
+.btn.btn-soon {
   background: var(--disabled-bg); color: var(--disabled-text);
-  border-color: var(--line); cursor: default;
+  border-color: var(--line);
 }
 .badge-soon {
   display: inline-block; font-size: .75em; font-weight: 600;
